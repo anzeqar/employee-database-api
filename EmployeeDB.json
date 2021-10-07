@@ -24,57 +24,5 @@
     "email": "ema@dmfa.com",
     "location": "GCC",
     "isWorking": true
-  },
-  {
-    "id": "953b0bd0-173a-4aae-8555-4eee173f2039",
-    "firstName": "why",
-    "lastName": "last",
-    "gender": "male",
-    "dob": "15-08-1985",
-    "age": 65,
-    "salary": 45,
-    "department": "safsfsdfsf",
-    "email": "fsafsd@ga.co",
-    "location": "sdlfsdfsdf",
-    "isWorking": false
-  },
-  {
-    "id": "0c06e562-9910-41ff-87fd-b6131bc5b594",
-    "firstName": "fdfsdf",
-    "lastName": "last name",
-    "gender": "fdsd",
-    "dob": "15-08-1985",
-    "age": 655,
-    "salary": 45,
-    "department": "df",
-    "email": "be@ef.cc",
-    "location": "fd",
-    "isWorking": false
-  },
-  {
-    "id": "31bec5c9-25fc-4a9d-861f-a3337ef59609",
-    "firstName": "fdfsdf",
-    "lastName": "last name",
-    "gender": "fdsd",
-    "dob": "15-08-1985",
-    "age": 655,
-    "salary": 45,
-    "department": "df",
-    "email": "be@ef.cc",
-    "location": "fd",
-    "isWorking": false
-  },
-  {
-    "id": "83ab230e-47d7-480b-8987-1169a408b6ad",
-    "firstName": "why",
-    "lastName": "last",
-    "gender": "n",
-    "dob": "15-08-1985",
-    "age": 5,
-    "salary": 54,
-    "department": "dfs",
-    "email": "endo@keto.com",
-    "location": "fd",
-    "isWorking": true
   }
 ]

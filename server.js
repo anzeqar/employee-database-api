@@ -12,15 +12,6 @@ const path = require("path");
 const fs = require("fs");
 let employees;
 
-fs.readFile(path.join(__dirname, "EmployeeDB.json"), "utf-8", (err, data) => {
-  if (err) throw err;
-  if (data === undefined || data === []) {
-    employees = data;
-  } else {
-    employees = JSON.parse(data);
-  }
-});
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger);
@@ -39,6 +30,14 @@ app.get("/create", (req, res) => {
 });
 
 app.get("/read", (req, res) => {
+  fs.readFile(path.join(__dirname, "EmployeeDB.json"), "utf-8", (err, data) => {
+    if (err) throw err;
+    if (data === undefined || data === []) {
+      employees = data;
+    } else {
+      employees = JSON.parse(data);
+    }
+  });
   res.render("read", { title: "Read All Employee", employees });
 });
 

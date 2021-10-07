@@ -1,0 +1,121 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="h2 text-center">{{title}}</h2>
+</div>
+
+<form
+  action="/api/employees/"
+  class="col-6 d-flex flex-column justify-content-center mx-auto"
+  id="update-form"
+  method="POST"
+>
+  <div class="mb-3 mt-4">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="id"
+        id="id"
+        class="update-id"
+        placeholder="Employee ID"
+        required="true"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="lastName"
+        id="lastName"
+        placeholder="Last Name"
+      />
+    </div>
+    <div class="mb-3"><input
+        type="text"
+        class="form-control"
+        name="gender"
+        id="gender"
+        placeholder="Gender"
+      /></div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="dob"
+        id="dob"
+        placeholder="Date of Birth (DD-MM-YYYY)"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        name="age"
+        id="age"
+        placeholder="Age"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        name="salary"
+        id="salary"
+        placeholder="Salary in Rupees (Yearly)"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="department"
+        id="department"
+        placeholder="Department"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        placeholder="Email"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="location"
+        id="location"
+        placeholder="Location"
+      />
+    </div>
+
+    <label for="isWorking" class="form-check-label pt-2">Currently Working ?
+      <input
+        type="checkbox"
+        class="form-check-input"
+        name="isWorking"
+        id="isWorking"
+      />
+    </label>
+  </div>
+
+  <input type="submit" value="submit" class="btn btn-primary btn-block w-100" />
+</form>
+
+<script>
+  const updateForm = document.querySelector("#update-form");
+  updateForm.addEventListener("submit", (e) => { let id = e.target[0].value;
+  updateForm.action = `/api/employees/${id}?_method=PUT`; });
+
+</script>

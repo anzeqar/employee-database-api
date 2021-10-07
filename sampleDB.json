@@ -1,0 +1,15 @@
+[
+  {
+    "id": "b6f4ed3c-51fa-4a8e-b9b8-b3ca9a373e0a",
+    "firstName": "Clark",
+    "lastName": "Smith",
+    "gender": "male",
+    "dob": "15-08-1985",
+    "age": 33,
+    "salary": 8880000,
+    "department": "Quantum",
+    "email": "clark@smith.com",
+    "location": "LA, USA",
+    "isWorking": true
+  }
+]

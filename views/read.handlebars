@@ -1,0 +1,21 @@
+<h2 class="h2 mb-4 text-center">
+  {{title}}
+</h2>
+<ul class="list-group">
+  {{#each employees}}
+    <li class="list-group-item">
+      <p>Employee ID: {{this.id}}</p>
+      <p>First Name: {{this.firstName}}</p>
+      <p>Last Name: {{this.lastName}}</p>
+      <p>Gender: {{this.gender}}</p>
+      <p>DOB: {{this.dob}}</p>
+      <p>Age: {{this.age}}</p>
+      <p>Salary: {{this.salary}}</p>
+      <p>Department: {{this.department}}</p>
+      <p>Email: {{this.email}}</p>
+      <p>Location: {{this.location}}</p>
+      <p>Working: {{this.isWorking}}</p>
+    </li>
+    <br />
+  {{/each}}
+</ul>

@@ -1,0 +1,32 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="h2 text-center">{{title}}</h2>
+</div>
+
+<form
+  action="/api/employees"
+  class="col-6 d-flex flex-column justify-content-center mx-auto"
+  id="delete-form"
+  method="post"
+>
+  <div class="mb-3 mt-4">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="id"
+        id="id"
+        placeholder="Employee ID"
+        required="true"
+      />
+    </div>
+  </div>
+  <input type="submit" value="submit" class="btn btn-primary btn-block w-100" />
+</form>
+
+<script>
+  const deleteForm = document.querySelector("#delete-form");
+  deleteForm.addEventListener("submit", (e) => { console.log("del"); let id =
+  e.target[0].value; deleteForm.action = `/api/employees/${id}?_method=DELETE`;
+  });
+
+</script>

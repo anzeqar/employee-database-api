@@ -64,7 +64,8 @@ router.post("/", (req, res) => {
       console.log("file wrote to json");
     }
   );
-  res.json({ msg: "employee added successfully", employees });
+  // res.json({ msg: "employee added successfully", employees });
+  res.redirect("/");
 });
 
 router.put("/:id", (req, res) => {

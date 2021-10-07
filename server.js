@@ -22,7 +22,6 @@ app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
   res.redirect("/create");
-  // res.send("API");
 });
 
 app.get("/create", (req, res) => {

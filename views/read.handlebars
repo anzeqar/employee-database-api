@@ -1,21 +1,38 @@
-<h2 class="h2 mb-4 text-center">
-  {{title}}
-</h2>
-<ul class="list-group">
-  {{#each employees}}
-    <li class="list-group-item">
-      <p>Employee ID: {{this.id}}</p>
-      <p>First Name: {{this.firstName}}</p>
-      <p>Last Name: {{this.lastName}}</p>
-      <p>Gender: {{this.gender}}</p>
-      <p>DOB: {{this.dob}}</p>
-      <p>Age: {{this.age}}</p>
-      <p>Salary: {{this.salary}}</p>
-      <p>Department: {{this.department}}</p>
-      <p>Email: {{this.email}}</p>
-      <p>Location: {{this.location}}</p>
-      <p>Working: {{this.isWorking}}</p>
-    </li>
-    <br />
-  {{/each}}
-</ul>
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="h2 text-center">{{title}}</h2>
+</div>
+
+<form
+  action="/api/employees"
+  class="col-6 d-flex flex-column justify-content-center mx-auto"
+  id="read-form"
+  method="get"
+>
+  <div class="mb-3 mt-4">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="id"
+        id="id"
+        placeholder="Employee ID"
+        required="true"
+      />
+    </div>
+  </div>
+  <input type="submit" value="submit" class="btn btn-primary btn-block w-100" />
+</form>
+<br />
+<h2 class="text-center">OR</h2>
+<br />
+<div class="container d-flex justify-content-center">
+  <a href="/api/employees/employees"><button class="btn btn-primary">Get All
+      Employees</button></a>
+</div>
+
+<script>
+  const deleteForm = document.querySelector("#read-form");
+  deleteForm.addEventListener("submit", (e) => { let id = e.target[0].value;
+  deleteForm.action = `/api/employees/${id}`; });
+
+</script>

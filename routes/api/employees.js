@@ -21,6 +21,10 @@ router.get("/", (req, res) => {
   res.json(employees);
 });
 
+router.get("/employees", (req, res) => {
+  res.render("employees", { employees: employees });
+});
+
 router.get("/:id", (req, res) => {
   let found = employees.some((member) => member.id === req.params.id);
   if (found) {
@@ -61,7 +65,6 @@ router.post("/", (req, res) => {
     "utf-8",
     (err) => {
       if (err) throw err;
-      console.log("file wrote to json");
     }
   );
   // res.json({ msg: "employee added successfully", employees });
@@ -69,7 +72,6 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  console.log(req.params);
   let found = employees.some((member) => member.id === req.params.id);
   let updateMember = req.body;
   if (found) {
@@ -108,7 +110,6 @@ router.put("/:id", (req, res) => {
           "utf-8",
           (err) => {
             if (err) throw err;
-            console.log("file wrote to json");
           }
         );
         res.json({ msg: "Member updated Successfully", member });
@@ -120,7 +121,6 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  console.log("delete");
   let found = employees.some((member) => member.id === req.params.id);
   if (found) {
     if (req.params.id == "b6f4ed3c-51fa-4a8e-b9b8-b3ca9a373e0a") {
@@ -133,7 +133,6 @@ router.delete("/:id", (req, res) => {
       "utf-8",
       (err) => {
         if (err) throw err;
-        console.log("file wrote to json");
       }
     );
     res.json({

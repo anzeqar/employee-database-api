@@ -25,8 +25,7 @@
 
 <script>
   const deleteForm = document.querySelector("#delete-form");
-  deleteForm.addEventListener("submit", (e) => { console.log("del"); let id =
-  e.target[0].value; deleteForm.action = `/api/employees/${id}?_method=DELETE`;
-  });
+  deleteForm.addEventListener("submit", (e) => { let id = e.target[0].value;
+  deleteForm.action = `/api/employees/${id}?_method=DELETE`; });
 
 </script>

@@ -4,7 +4,7 @@
 
 <form
   action="/api/employees"
-  class="col-6 d-flex flex-column justify-content-center mx-auto"
+  class="col-10 d-flex flex-column justify-content-center mx-auto"
   id="create-form"
   method="post"
 >
@@ -122,8 +122,3 @@
 
   <input type="submit" value="submit" class="btn btn-primary btn-block w-100" />
 </form>
-<script>
-  const createForm=document.querySelector('#create-form');
-  createForm.addEventListener('submit',(e)=>{ e.preventDefault();
-  createForm.reset()}
-</script>
